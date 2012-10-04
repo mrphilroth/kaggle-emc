@@ -1,4 +1,5 @@
 kaggle-emc
 ==========
 
-Code I used in the EMC Data Science Challenge kaggle competition
+This repository contains the code I used to compete in the the EMC Data Science Challenge on Kaggle.  You can find details of the competition [here](http://www.kaggle.com/c/emc-data-science/).
+
