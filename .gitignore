@@ -1,3 +1,6 @@
 # Data Files
 *.csv
 *.mat
+
+# Compiled Python
+*.pyc

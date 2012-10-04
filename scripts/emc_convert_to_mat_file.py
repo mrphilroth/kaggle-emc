@@ -2,6 +2,7 @@
 #
 
 import EMC_IO
+import utility
 import numpy as np
 from scipy.io import savemat
 
@@ -14,13 +15,12 @@ def row_normalize(d) :
         i += 1
     return d
 
-ddir = "/home/proth/kaggle/EMCsourcecode/data/"
-d = EMC_IO.EMC_ReadData(ddir + "train_data.csv")
-savemat(ddir + "train_data.mat", {'a': d})
+d = EMC_IO.EMC_ReadData(utility.ddir + "/train_data.csv")
+savemat(utility.ddir + "/train_data.mat", {'a': d})
 drn = row_normalize(d)
-savemat(ddir + "train_data_row_normalized.mat", {'a': drn})
+savemat(utility.ddir + "/train_data_row_normalized.mat", {'a': drn})
 
-dtest = EMC_IO.EMC_ReadData(ddir + "test_data.csv")
-savemat(ddir + "test_data.mat", {'a': dtest})
+dtest = EMC_IO.EMC_ReadData(utility.ddir + "/test_data.csv")
+savemat(utility.ddir + "/test_data.mat", {'a': dtest})
 dtestrn = row_normalize(dtest)
-savemat(ddir + "test_data_row_normalized.mat", {'a': dtestrn})
+savemat(utility.ddir + "/test_data_row_normalized.mat", {'a': dtestrn})
